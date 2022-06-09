@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.end.mapper.UserMapper">
+    
+<!--    根据用户名查找用户-->
+    <select id="findByName" resultType="User" parameterType="String">
+        select *
+        from user where userName = #{name};
+    </select>
+</mapper>
+
