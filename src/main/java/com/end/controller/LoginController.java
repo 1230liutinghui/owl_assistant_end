@@ -22,6 +22,7 @@ public class LoginController {
     }
 
     @RequestMapping("/user/logout")
+    //注销账号
     public ResponseResult logout(){
         return loginServcie.logout();
     }

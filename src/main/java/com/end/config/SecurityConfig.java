@@ -60,6 +60,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         //允许跨域
         http.cors();
+
+        //退出时关闭当前session
+        http.logout()
+                .invalidateHttpSession(true)
+                .clearAuthentication(true)
+                .deleteCookies("JSESSIONID");
     }
 
     @Bean

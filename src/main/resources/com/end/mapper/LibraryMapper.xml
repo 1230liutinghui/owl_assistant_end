@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.end.mapper.LibraryMapper">
+<!--    根据最佳问题查找推荐内容-->
+    <select id="findByKeyWord" parameterType="String" resultType="String">
+        select content
+        from library where key_word=#{key_word}
+    </select>
+
+<!--    查找所有关键词-->
+    <select id="findAll" resultType="String">
+        select key_word
+        from library
+    </select>
+</mapper>
+
