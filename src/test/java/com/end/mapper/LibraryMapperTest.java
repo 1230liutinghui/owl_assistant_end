@@ -15,7 +15,7 @@ class LibraryMapperTest {
     //测试根据关键词查找内容，测试通过
     @Test
     void findByKeyWord() {
-        String contents = libraryMapper.findByKeyWord("什么时候可以试驾");
+        String contents = libraryMapper.findByKeyWord("P7续航里程");
         System.out.println(contents);
     }
 
