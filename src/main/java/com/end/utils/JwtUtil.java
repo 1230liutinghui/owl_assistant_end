@@ -60,7 +60,7 @@ public class JwtUtil {
         return Jwts.builder()
                 .setId(uuid)              //唯一的ID
                 .setSubject(subject)   // 主题  可以是JSON数据
-                .setExpiration(new Date(System.currentTimeMillis() + 3600*1000))//过期时间一小时
+                .setExpiration(new Date(System.currentTimeMillis() + 86400*1000))//过期时间一小时
                 .setIssuer("sg")     // 签发者
                 .setIssuedAt(now)      // 签发时间
                 .signWith(signatureAlgorithm, secretKey) //使用HS256对称加密算法签名, 第二个参数为秘钥

@@ -4,19 +4,19 @@
 
 <!--    根据记录id查询记录-->
     <select id="queryById" parameterType="Integer" resultType="Record">
-        select id, job_id, phone, score, start_time, end_time
+        select id, job_id, phone, score, start_time, end_time, content
         from record where id=#{id}
     </select>
 
 <!--    根据用户工号查询相关记录-->
     <select id="queryByUserId" parameterType="Integer" resultType="Record">
-        select id, job_id, phone, score, start_time, end_time
+        select id, job_id, phone, score, start_time, end_time, content
         from record where job_id=#{job_id}
     </select>
 
 <!--    添加通话记录-->
     <insert id="addRecord" parameterType="Record" useGeneratedKeys="true">
-        insert into record values (#{id}, #{job_id}, #{phone}, #{score}, #{start_time}, #{end_time})
+        insert into record values (#{id}, #{job_id}, #{phone}, #{score}, #{start_time}, #{end_time}, #{content})
     </insert>
 </mapper>
 

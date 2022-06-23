@@ -3,8 +3,7 @@ package com.end.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
+import lombok.NoArgsConstructor;;
 
 import java.util.Date;
 
@@ -12,8 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Record {
-    private int id;       //记录id
-
+    private int id;    //记录id
     private int job_id;     //工号
 
     //客户联系方式
@@ -29,5 +27,8 @@ public class Record {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     // 结束时间
     private Date end_time;
+
+    //记录的通话内容
+    private String content;
 }
 

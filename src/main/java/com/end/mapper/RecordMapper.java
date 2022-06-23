@@ -15,5 +15,5 @@ public interface RecordMapper {
     Record queryById(@Param("id") Integer id);
 
     //添加通话记录
-    void addRecord(@Param("record") Record record);
+    void addRecord(Record record);
 }
